@@ -19,12 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Aloia CMS
+tagline: Let Aloia CMS handle the dirty work...start writing content.
 email: roelofjanelsinga@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Aloia CMS is a drop-in flat file content management system built on top of Laravel.
-  You won't need to rebuild your entire application to be able to offer CMS abilities,
+  Aloia CMS is a drop-in flat file CMS built on top of Laravel.
+  You won't need to rebuild your entire application to be able to offer CMS capabilities,
   you can simply include the CMS as a library and start writing.
-  You decide how to display the content and the CMS does the rest for you.
 baseurl: ""
 url: "https://aloiacms.com"
 twitter_username: RJElsinga

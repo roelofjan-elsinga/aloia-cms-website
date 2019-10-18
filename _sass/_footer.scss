@@ -25,5 +25,15 @@ footer {
   font-size: $footer-font-size;
   font-weight: $footer-font-weight;
   padding: $footer-padding;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .description {
+    flex: 1;
+  }
+
+  @media #{$breakpoint-md} {
+    flex-direction: row;
+  }
+
 }

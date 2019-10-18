@@ -12,10 +12,14 @@
 
 .site-header .site-title {
   font-size: $h2;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.site-nav {
-  padding-top: $nav-padding;
+  .site-title-name {
+    display: block;
+    margin-left: 0.5em;
+  }
 }
 
 .site-header nav a {

@@ -1,7 +1,10 @@
 <header class="site-header px2 px-responsive">
   <div class="mt2 wrap">
     <div class="measure">
-      <a href="{{ "/" | relative_url }}" class="site-title">{{ site.title }}</a>
+      <a href="{{ "/" | relative_url }}" class="site-title">
+        <img src="{{ '/icons/android-icon-36x36.png' | relative_url }}" />
+        <span class="site-title-name">{{site.title}}</span>
+      </a>
       <nav class="site-nav">
         {% include navigation.html %}
       </nav>

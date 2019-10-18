@@ -12,9 +12,16 @@ p {
   line-height: 1.5;
 }
 
-small,
-.small {
-  font-size: 0.707rem;
+.h1-subheader {
+  font-size: 0.5em;
+  display: block;
+  color: $mid-gray;
+  font-weight: normal;
+  font-style: italic;
+
+  @media #{$breakpoint-xl} {
+    font-size: 0.3em;
+  }
 }
 
 sup {
