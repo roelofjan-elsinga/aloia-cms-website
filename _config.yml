@@ -19,7 +19,10 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Aloia CMS
-tagline: Let Aloia CMS handle the dirty work...start writing content.
+tagline: >
+  Aloia CMS is a CMS for developers who want to choose between "I want ultimate control over my content"
+  and "Please, let the CMS do the work for me". Everything works automatically out-of-the-box,
+  but you can influence every single aspect of the CMS if you so choose.
 email: roelofjanelsinga@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Aloia CMS is a drop-in flat file CMS built on top of Laravel.
@@ -28,7 +31,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://aloiacms.com"
 twitter_username: RJElsinga
-github_username:  roelofjan-elsinga
+github_username:  roelofjan-elsinga/flat-file-cms
 
 # Build settings
 plugins:
@@ -38,6 +41,21 @@ plugins:
 markdown:     kramdown
 permalink:    pretty
 paginate:     4
+
+header_pages:
+  - documentation.md
+
+collections:
+  documentation:
+    output: true
+    order:
+      - requirements.md
+      - installation.md
+      - plugins.md
+
+show_social_icons: true
+enable_anchorjs: true
+copyright_years: 2019
 
 defaults:
   -
@@ -62,3 +80,6 @@ defaults:
 exclude:
   - CNAME
   - .idea/
+  - node_modules
+  - "package*.json"
+  - "*.config.js"

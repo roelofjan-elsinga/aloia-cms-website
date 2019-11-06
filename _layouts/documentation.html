@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+{% include head.html %}
+
+<body class="site{% if site.animated %} animated fade-in-down{% endif %}">
+
+{% if site.google_tag_manager %}
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+{% endif %}
+
+{% if site.facebook_comments %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId={{ site.facebook_appid }}";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% endif %}
+
+<div class="site-wrap">
+
+    <div class="post p-responsive wrap" role="main">
+
+        <main class="flex flex-col md:flex-row">
+            <aside class="w-full md:w-64 pt-8 md:pt-12 sticky bg-yellow-100 pl-8 sticky md:min-h-screen">
+                {% include documentation_sidebar.html %}
+            </aside>
+            <article class="pl-8 md:pl-16 pr-8 md:pr-4 flex-1">
+                <div class="w-full md:w-3/4">
+                    {{ content }}
+                </div>
+            </article>
+        </main>
+
+    </div>
+</div>
+</body>
+
+</html>
+
+

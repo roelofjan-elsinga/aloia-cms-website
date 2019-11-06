@@ -1,8 +1,16 @@
-<footer class="center">
-  {% if site.description %}
-  <section class="description">
-    {{site.description}}
+<footer class="justify-center flex flex-col md:flex-row text-center md:text-left p-8 text-xs text-gray-500">
+  <section class="flex-1">
+    <span class="block">
+      Aloia CMS is created by <a href="https://roelofjanelsinga.com" target="_blank" class="text-gray-500">Roelof Jan Elsinga</a>
+    </span>
+    <span>
+      Copyright &copy; {{ site.copyright_years }}
+    </span>
   </section>
+  {% if site.show_social_icons %}
+    <section class="text-lg mt-2 md:mt-0">
+      {% include social_links.html %}
+    </section>
   {% endif %}
 </footer>
 {% if site.enable_anchorjs %}<!-- AnchorJS -->

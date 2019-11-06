@@ -5,13 +5,9 @@
         <img src="{{ '/icons/android-icon-36x36.png' | relative_url }}" />
         <span class="site-title-name">{{site.title}}</span>
       </a>
-      <nav class="site-nav">
+      <nav class="site-nav mt-4 md:mt-0">
         {% include navigation.html %}
       </nav>
-      <div class="clearfix"></div>
-      {% if site.show_social_icons %}
-        {% include social_links.html %}
-      {% endif %}
     </div>
   </div>
 </header>

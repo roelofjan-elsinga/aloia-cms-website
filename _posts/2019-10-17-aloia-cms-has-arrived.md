@@ -2,7 +2,7 @@
 title:  "Aloia CMS has arrived"
 date:   2019-10-17 10:24:28 +0200
 categories: product
-permalink: /aloia-cms-has-arrived
+permalink: /articles/aloia-cms-has-arrived
 ---
 
 The ongoing development of Flat File CMS has been going really well. 

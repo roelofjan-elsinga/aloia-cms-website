@@ -2,17 +2,22 @@
 layout: default
 ---
 <h1 class="h1-responsive">
-    Aloia CMS
-    {% if site.tagline %}
-    <small class="h1-subheader">{{ site.tagline }}</small>
-    {% endif %}
+    The CMS for developers and content creators alike
 </h1>
 
-The code can be found on <a href="https://github.com/roelofjan-elsinga/flat-file-cms">GitHub</a>.
+{% if site.tagline %}
+  <p>{{ site.tagline }}</p>
+{% endif %}
+
+<a href="{% link documentation.md %}" class="bg-yellow-500 text-primary rounded p-2 no-underline inline-block">Documentation</a>
+
+<a href="https://github.com/roelofjan-elsinga/flat-file-cms" class="ml-4 inline-block text-primary">
+    <span class="fa fa-github"></span> Source code
+</a>
 
 {% assign posts_count = paginator.posts | size %}
 
-<div class="home">
+<div class="home mt-16">
   {% if posts_count > 0 %}
     <div class="posts">
       {% for post in paginator.posts %}
@@ -24,7 +29,9 @@ The code can be found on <a href="https://github.com/roelofjan-elsinga/flat-file
 	      {{ post.date | date: "%b %-d, %Y" }}
 	    {% endif %}
 	  </p>
-          <a href="{{ post.url | relative_url }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3></a>
+          <a href="{{ post.url | relative_url }}" class="post-link">
+              <h3 class="h2 post-title">{{ post.title }}</h3>
+          </a>
           <span class="post-summary">
             {% if post.summary %}
               {{ post.summary }}

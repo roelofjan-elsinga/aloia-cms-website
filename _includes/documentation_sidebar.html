@@ -1,0 +1,15 @@
+<a href="{{ '/' | relative_url }}" class="text-primary mb-8 md:mb-10 block hover:no-underline">
+    <img src="{{ '/icons/android-icon-36x36.png' | relative_url }}" class="inline-block" />
+    <span class="ml-2">{{site.title}}</span>
+</a>
+
+<ul class="text-sm pl-0 flex flex-row md:flex-col">
+    <li class="mr-4 md:mr-0">
+        <a href="{% link documentation.md %}" class="text-primary">Prologue</a>
+    </li>
+    {% for documentation in site.documentation %}
+        <li class="mr-4 md:mr-0">
+            <a href="{{ documentation.url }}" class="text-primary">{{documentation.title}}</a>
+        </li>
+    {% endfor %}
+</ul>
