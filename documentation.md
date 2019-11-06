@@ -27,5 +27,5 @@ Now you have a great base to start from. But now someone asks you to change some
 tweak some of the code. You're now finding yourself in a situation where you have to work around choices 
 others made about your content and it just feels dirty. 
 
-What if all of the content management was taken care of for you, but you had ultimate control over 
+What if all of the content management was taken care of for you, but you had full control over 
 the presentation of your content? That's where Aloia CMS comes in.
