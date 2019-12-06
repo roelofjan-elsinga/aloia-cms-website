@@ -22,6 +22,6 @@
 {% endif %}
 <script type="text/javascript">
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}")
+      navigator.serviceWorker.register("{{ '/sw.js' | relative_url }}?{{site.time | date: '%Y%m%d%H%M%S'}}")
     }
 </script>
