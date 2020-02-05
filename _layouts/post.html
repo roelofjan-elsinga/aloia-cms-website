@@ -9,10 +9,6 @@ layout: default
 
 <div class="post-header mb2">
   <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: site.date_format }}</span><br>
-  {% if page.update_date %}
-    <span class="post-meta">{{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date: site.date_format }}</span><br>
-  {% endif %}
   <span class="post-meta small">
   {% if page.minutes %}
     {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
@@ -25,6 +21,11 @@ layout: default
 <article class="post-content">
   {{ content }}
 </article>
+
+<span class="post-meta">Posted on: {{ page.date | date_to_long_string }}</span><br>
+{% if page.update_date %}
+<span class="post-meta">Updated on: {{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date_to_long_string }}</span><br>
+{% endif %}
 
 {% if site.show_sharing_icons %}
   {% include share_buttons.html %}
