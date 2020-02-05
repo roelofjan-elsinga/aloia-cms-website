@@ -8,7 +8,7 @@ self.addEventListener("install", function(e) {
     caches.open(CACHE_NAME).then(function(cache) {
       return cache.addAll([
         "{{ '/css/pixyll.css' | relative_url }}?id={{ site.time | date: '%Y%m%d%H%M' }}",
-        "{{ '/' | relative_url }}"
+        // "{{ '/' | relative_url }}"
       ]);
     })
   );
