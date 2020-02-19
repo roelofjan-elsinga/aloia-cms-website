@@ -48,10 +48,6 @@ header_pages:
 collections:
   documentation:
     output: true
-    order:
-      - requirements.md
-      - installation.md
-      - plugins.md
 
 show_social_icons: true
 enable_anchorjs: true

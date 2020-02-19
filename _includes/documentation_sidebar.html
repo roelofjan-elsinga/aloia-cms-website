@@ -7,9 +7,25 @@
     <li class="mr-4 md:mr-0">
         <a href="{% link documentation.md %}" class="text-primary">Prologue</a>
     </li>
-    {% for documentation in site.documentation %}
-        <li class="mr-4 md:mr-0">
-            <a href="{{ documentation.url }}" class="text-primary">{{documentation.title}}</a>
-        </li>
-    {% endfor %}
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/requirements.md %}" class="text-primary">Requirements</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/installation.md %}" class="text-primary">Installation</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/built-in-content-types.md %}" class="text-primary">Built-in content types</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/interacting-with-content.md %}" class="text-primary">Interacting with content</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/creating-content-types.md %}" class="text-primary">Creating content types</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/using-content-blocks.md %}" class="text-primary">Using content blocks</a>
+    </li>
+    <li class="mr-4 md:mr-0">
+        <a href="{% link _documentation/plugins.md %}" class="text-primary">Available plugins</a>
+    </li>
 </ul>
