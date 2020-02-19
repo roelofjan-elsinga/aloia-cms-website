@@ -23,10 +23,11 @@ out what the method was you needed.
 
 In version 1.0.0 this has all been changed. These entities are still built into the CMS, but are now all based on a common 
 parent: Model. This means you can interact the same way with each of these elements. This also means that creating custom 
-content types is very easy. You can read about it in the documentation. The configuration and content part are also unified 
-in a single file. The configuration is now done through front matter, a Yaml based configuration, in the content files themselves.
-This removes a layer of potential errors and simplifies the content creation significantly: everything you need to know is
-right there.
+content types is very easy. You can read more about that at 
+[Creating content types]({% link _documentation/creating-content-types.md %}). 
+The configuration and content part are also unified in a single file. The configuration is now done through front matter, 
+a Yaml based configuration, in the content files themselves. This removes a layer of potential errors and simplifies 
+the content creation significantly: everything you need to know is right there.
 
 ### The project has a new name
 The project used to be called ``flat-file-cms``, but is now called ``aloia-cms``. This means you will need to update the 
@@ -85,7 +86,13 @@ The following classes/interfaces are deprecated and will be removed in a future 
 ### How to upgrade from v0.x
 Upgrading to a new major version is never fun, because it takes a lot of work. However, a lot of effort is put into 
 making this go as smoothly as possible. You can use a command that will migrate all of your content, 
-that the CMS officially supported, from the old format into the new. This takes about 5ms and will combine all 
+that the CMS officially supported, from the old format into the new. 
+
+```bash
+php artisan aloiacms:upgrade-0-to-1
+```
+
+This takes about 5ms and will combine all 
 configuration with the content into files in the collections folder, or the folder you've specified. 
 The public API for the content types has changed a little bit, but the most important part is this one: 
 
