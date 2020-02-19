@@ -3,3 +3,7 @@
 @tailwind components;
 
 @tailwind utilities;
+
+ul {
+    list-style-type: disc;
+}
