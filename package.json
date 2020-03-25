@@ -25,7 +25,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "jekyll build && npm run prod"
+      "pre-commit": "bundle exec jekyll build && npm run prod"
     }
   }
 }
