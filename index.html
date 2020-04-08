@@ -3,7 +3,7 @@ layout: default
 title: "Aloia CMS: The flat file CMS for Laravel"
 ---
 <h1 class="h1-responsive">
-    The CMS for developers who want full control over their content
+    Aloia CMS: The flat file content management system for Laravel
 </h1>
 
 {% if site.tagline %}
@@ -16,9 +16,11 @@ title: "Aloia CMS: The flat file CMS for Laravel"
     <span class="fa fa-github"></span> Source code
 </a>
 
+<h2 class="mt-16">Latest news</h2>
+
 {% assign posts_count = paginator.posts | size %}
 
-<div class="home mt-16">
+<div class="home">
   {% if posts_count > 0 %}
     <div class="posts">
       {% for post in paginator.posts %}
@@ -46,6 +48,14 @@ title: "Aloia CMS: The flat file CMS for Laravel"
 
     {% include pagination.html %}
   {% else %}
-    <h1 class='center'>{{ site.text.index.coming_soon }}</h1>
+    <h3 class='center'>{{ site.text.index.coming_soon }}</h3>
   {% endif %}
+</div>
+
+<div class="mt-16 bg-yellow-300 rounded p-4">
+  <h3 class="mt-0">Are you wondering who uses Aloia CMS in production?</h3>
+  <p>
+    Aloia CMS is already used in production for a few websites. The content management system gets better with every website that's developed with it.
+  </p>
+  <a href="{% link _pages/who-uses-aloia-cms.md %}" class="text-black underline">Find out who uses Aloia CMS in production</a>
 </div>
