@@ -4,7 +4,7 @@ date:   2020-04-07 12:00:00 +0200
 categories: product
 permalink: /articles/updates-to-gui-package-3-1
 summary: | 
-    The GUI package for Aloia CMS has received a much needed update and it's now easier to work with 
+    The GUI package for Aloia CMS has received a much-needed update. It's now easier to work with 
     images in your posts. This post will lay out the changes and how this impacts you.
 ---
 
