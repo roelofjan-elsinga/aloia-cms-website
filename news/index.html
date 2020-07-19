@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Aloia CMS news"
+---
+<h1 class="h1-responsive">
+    Latest news
+</h1>
+
+{% assign posts_count = paginator.posts | size %}
+
+<div class="home">
+    <div class="posts">
+        {% for post in paginator.posts %}
+        {% include news_preview.html %}
+        {% endfor %}
+    </div>
+
+    {% include pagination.html %}
+</div>

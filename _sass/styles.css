@@ -7,3 +7,43 @@
 ul {
     list-style-type: disc;
 }
+
+.accent-link {
+    @apply duration-300;
+}
+
+.accent-link:hover {
+    @apply text-warm-light no-underline;
+}
+
+.active-pagination-link {
+    @apply bg-cold-lightest text-cold-darker p-2 rounded duration-300;
+}
+
+.active-pagination-link:hover {
+    @apply no-underline bg-cold-lighter;
+}
+
+.disabled-pagination-link {
+    @apply bg-gray-200 text-gray-700 p-2 rounded duration-300;
+}
+
+.cta-banner {
+    @apply rounded p-4 bg-cold-lightest text-cold-darker my-16 shadow-md;
+}
+
+.cta-banner p {
+    @apply text-cold-darker;
+}
+
+.cta-banner a {
+    @apply text-cold-darker;
+}
+
+.cta-button {
+    @apply bg-cold-lightest text-cold-darker text-primary rounded p-2 no-underline inline-block duration-300;
+}
+
+.cta-button:hover {
+    @apply no-underline bg-cold-lighter;
+}

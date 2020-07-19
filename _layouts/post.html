@@ -7,9 +7,9 @@ layout: default
 {% assign minutes = 1 %}
 {% endif %}
 
-<div class="post-header mb2">
-  <h1>{{ page.title }}</h1>
-  <span class="post-meta small">
+<div class="post-header">
+  <h1 class="mb-2">{{ page.title }}</h1>
+  <span class="italic text-warm mb-4 block">
   {% if page.minutes %}
     {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
   {% else %}

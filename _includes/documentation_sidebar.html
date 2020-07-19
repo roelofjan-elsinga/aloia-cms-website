@@ -1,34 +1,57 @@
-<a href="{{ '/' | relative_url }}" class="text-primary mb-8 md:mb-10 block hover:no-underline">
-    <img src="{{ '/icons/android-icon-36x36.png' | relative_url }}" class="inline-block" />
-    <span class="ml-2">{{site.title}}</span>
-</a>
+<div class="flex content-center">
+    <a href="{{ '/' | relative_url }}" class="text-primary mb-8 md:mb-10 block hover:no-underline flex-1">
+        <img src="{{ '/images/logo_xs.png' | relative_url }}" class="h-12 inline-block"/>
+        <span class="ml-2 site-title-name font-bold font-sans text-2xl text-cold-dark hover:no-underline">{{site.title}}</span>
+    </a>
 
-<ul class="text-sm pl-0 flex flex-col list-reset">
-    <li class="mr-4 md:mr-0">
-        <a href="{% link documentation.md %}" class="text-primary">Prologue</a>
+    <button class="md:hidden flex rounded p-2 mr-8 text-cold-darker" onclick="toggleDropdown('dropdown')">
+        Menu
+    </button>
+</div>
+
+<ul class="hidden md:flex text-sm md:pl-0 flex flex-col list-none absolute md:relative bg-cold-lightest right-0 mr-8 p-4"
+    id="dropdown">
+    <li class="mb-2 md:mr-0">
+        <a href="{% link documentation.md %}" class="text-cold-darker hover:text-warm-light">Prologue</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/requirements.md %}" class="text-primary">Requirements</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/requirements.md %}" class="text-cold-darker hover:text-warm-light">Requirements</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/installation.md %}" class="text-primary">Installation</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/installation.md %}" class="text-cold-darker hover:text-warm-light">Installation</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/built-in-content-types.md %}" class="text-primary">Built-in content types</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/built-in-content-types.md %}" class="text-cold-darker hover:text-warm-light">Built-in content types</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/interacting-with-content.md %}" class="text-primary">Interacting with content</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/interacting-with-content.md %}" class="text-cold-darker hover:text-warm-light">Interacting with content</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/creating-content-types.md %}" class="text-primary">Creating content types</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/creating-content-types.md %}" class="text-cold-darker hover:text-warm-light">Creating content types</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/using-content-blocks.md %}" class="text-primary">Using content blocks</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/using-content-blocks.md %}" class="text-cold-darker hover:text-warm-light">Using content blocks</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/plugins.md %}" class="text-primary">Available plugins</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/plugins.md %}" class="text-cold-darker hover:text-warm-light">Available plugins</a>
     </li>
-    <li class="mr-4 md:mr-0">
-        <a href="{% link _documentation/upgrade-from-0-to-1.md %}" class="text-primary">Upgrade from 0.x to 1.0.0</a>
+    <li class="mb-2 md:mr-0">
+        <a href="{% link _documentation/upgrade-from-0-to-1.md %}" class="text-cold-darker hover:text-warm-light">Upgrade from 0.x to 1.0.0</a>
     </li>
 </ul>
+
+<script>
+    function toggleDropdown(name) {
+        var dropdown = document.getElementById(name);
+        var isClosed = dropdown.classList.contains('hidden');
+
+        if(isClosed) {
+            dropdown.classList.remove('hidden')
+            dropdown.classList.add('block')
+        } else {
+            dropdown.classList.add('hidden')
+            dropdown.classList.remove('block')
+        }
+
+    }
+</script>

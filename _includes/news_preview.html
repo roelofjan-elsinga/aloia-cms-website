@@ -1,0 +1,19 @@
+<div class="post py-4">
+    <p class="italic text-gray-600">
+        {% if site.date_format %}
+        {{ post.date | date: site.date_format }}
+        {% else %}
+        {{ post.date | date: "%b %-d, %Y" }}
+        {% endif %}
+    </p>
+    <a href="{{ post.url | relative_url }}" class="mt-0 mb-2 block text-warm-light font-medium">
+        <h3 class="text-2xl post-title">{{ post.title }}</h3>
+    </a>
+    <span class="post-summary">
+        {% if post.summary %}
+          {{ post.summary }}
+        {% else %}
+          {{ post.excerpt }}
+        {% endif %}
+      </span>
+</div>

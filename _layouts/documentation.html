@@ -4,7 +4,7 @@
 
 {% include head.html %}
 
-<body class="site{% if site.animated %} animated fade-in-down{% endif %}">
+<body class="site">
 
 {% if site.google_tag_manager %}
 <noscript><iframe src="https://www.googletagmanager.com/gtag/js?id={{ site.google_tag_manager }}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -36,10 +36,10 @@
     <div class="post p-responsive wrap" role="main">
 
         <main class="flex flex-col md:flex-row">
-            <aside class="w-full md:w-64 pt-8 md:pt-12 fixed top-0 bg-yellow-100 pl-8 sticky md:min-h-screen">
+            <aside class="w-full md:w-64 pt-8 md:pt-12 fixed top-0 bg-cold-lightest pl-8 sticky md:min-h-screen">
                 {% include documentation_sidebar.html %}
             </aside>
-            <article class="pl-8 md:pl-16 pr-8 md:pr-4 flex-1">
+            <article class="pl-8 md:pl-16 pr-8 md:pr-4 flex-1 mt-8 md:mt-16">
                 <div class="w-full md:w-3/4">
                     {{ content }}
                 </div>

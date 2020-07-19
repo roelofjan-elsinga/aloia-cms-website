@@ -23,7 +23,7 @@ tagline: >
   Aloia CMS is a content management system for Laravel developers who want to choose between "I want full control over my content"
   and "Please, let the CMS do the work for me". Everything works automatically out-of-the-box,
   but you can change every single aspect of the CMS if you so choose.
-email: hello@roelofjanelsinga.com
+email: hello@aloiacms.com
 description: >
   Aloia CMS is a content management system for Laravel developers who want to choose between "I want full control over my content"
   and "Please, let the CMS do the work for me". Everything works automatically out-of-the-box,
@@ -32,6 +32,7 @@ baseurl: ""
 url: "https://aloiacms.com"
 twitter_username: RJElsinga
 github_username:  roelofjan-elsinga
+linkedin_username:  roelofjanelsinga
 
 # Build settings
 plugins:
@@ -41,9 +42,11 @@ plugins:
 markdown:     kramdown
 permalink:    pretty
 paginate:     4
+paginate_path: "/news/page:num/"
 
 header_pages:
   - documentation.md
+  - news/index.html
 
 collections:
   documentation:
@@ -54,7 +57,7 @@ collections:
 show_social_icons: true
 enable_anchorjs: true
 post_preview_image: true
-copyright_years: 2019
+copyright_years: 2020
 google_tag_manager: "UA-152047151-1"
 
 defaults:

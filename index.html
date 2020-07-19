@@ -2,7 +2,7 @@
 layout: default
 title: "Aloia CMS: The flat file CMS for Laravel"
 ---
-<h1 class="h1-responsive">
+<h1 class="h1-responsive mb-6">
     Aloia CMS: The flat file content management system for Laravel
 </h1>
 
@@ -10,9 +10,11 @@ title: "Aloia CMS: The flat file CMS for Laravel"
   <p>{{ site.tagline }}</p>
 {% endif %}
 
-<a href="{% link documentation.md %}" class="bg-yellow-500 text-primary rounded p-2 no-underline inline-block">Documentation</a>
+<a href="{% link documentation.md %}"
+   class="cta-button inline-block"
+>Documentation</a>
 
-<a href="https://github.com/roelofjan-elsinga/aloia-cms" class="ml-4 inline-block text-primary">
+<a href="https://github.com/roelofjan-elsinga/aloia-cms" class="ml-4 inline-block text-primary accent-link">
     <span class="fa fa-github"></span> Source code
 </a>
 
@@ -30,44 +32,23 @@ title: "Aloia CMS: The flat file CMS for Laravel"
 
 <h2 class="mt-16">Latest news</h2>
 
-{% assign posts_count = paginator.posts | size %}
-
 <div class="home">
-  {% if posts_count > 0 %}
-    <div class="posts">
-      {% for post in paginator.posts %}
-        <div class="post py3">
-          <p class="post-meta">
-	    {% if site.date_format %}
-	      {{ post.date | date: site.date_format }}
-	    {% else %}
-	      {{ post.date | date: "%b %-d, %Y" }}
-	    {% endif %}
-	  </p>
-          <a href="{{ post.url | relative_url }}" class="post-link">
-              <h3 class="h2 post-title">{{ post.title }}</h3>
-          </a>
-          <span class="post-summary">
-            {% if post.summary %}
-              {{ post.summary }}
-            {% else %}
-              {{ post.excerpt }}
-            {% endif %}
-          </span>
-        </div>
-      {% endfor %}
-    </div>
+  <div class="posts">
+    {% for post in site.posts limit:2 %}
+    {% include news_preview.html %}
+    {% endfor %}
+  </div>
 
-    {% include pagination.html %}
-  {% else %}
-    <h3 class='center'>{{ site.text.index.coming_soon }}</h3>
-  {% endif %}
+  <div class="text-center">
+    <a href="{% link news/index.html %}" class="cta-button mt-8">Read more news</a>
+  </div>
+
 </div>
 
-<div class="mt-16 bg-yellow-300 rounded p-4">
-  <h3 class="mt-0">Are you wondering who uses Aloia CMS in production?</h3>
+<div class="cta-banner">
+  <h3 class="mt-0 mb-2">Are you wondering who uses Aloia CMS in production?</h3>
   <p>
     Aloia CMS is already used in production for a few websites. The content management system gets better with every website that's developed with it.
   </p>
-  <a href="{% link _pages/who-uses-aloia-cms.md %}" class="text-black underline">Find out who uses Aloia CMS in production</a>
+  <a href="{% link _pages/who-uses-aloia-cms.md %}" class="underline">Find out who uses Aloia CMS in production</a>
 </div>
