@@ -19,10 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Aloia CMS
-tagline: >
-  Aloia CMS is a content management system for Laravel developers who want to choose between "I want full control over my content"
-  and "Please, let the CMS do the work for me". Everything works automatically out-of-the-box,
-  but you can change every single aspect of the CMS if you so choose.
 email: hello@aloiacms.com
 description: >
   Aloia CMS is a content management system for Laravel developers who want to choose between "I want full control over my content"
