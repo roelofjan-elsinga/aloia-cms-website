@@ -8,6 +8,10 @@ ul {
     list-style-type: disc;
 }
 
+.inline-link {
+    @apply text-current underline;
+}
+
 .accent-link {
     @apply duration-300;
 }
@@ -47,3 +51,4 @@ ul {
 .cta-button:hover {
     @apply no-underline bg-cold-lighter;
 }
+
