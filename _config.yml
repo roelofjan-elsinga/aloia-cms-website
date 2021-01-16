@@ -27,7 +27,7 @@ description: >
 baseurl: ""
 url: "https://aloiacms.com"
 twitter_username: RJElsinga
-github_username:  roelofjan-elsinga
+github_repo:  roelofjan-elsinga/aloia-cms
 linkedin_username:  roelofjanelsinga
 
 # Build settings

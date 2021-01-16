@@ -1,8 +1,11 @@
 module.exports = {
-    purge: [
-        './**/*.html',
-        './**/*.md',
-    ],
+    purge: {
+        layers: ['utilities'],
+        content: [
+            './**/*.html',
+            './**/*.md',
+        ],
+    },
     theme: {
         extend: {
             colors: {
@@ -30,8 +33,4 @@ module.exports = {
     },
     variants: {},
     plugins: [],
-
-    future: {
-        removeDeprecatedGapUtilities: true,
-    },
 };

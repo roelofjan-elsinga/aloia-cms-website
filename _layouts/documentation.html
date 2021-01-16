@@ -35,14 +35,12 @@
 
     <div class="post p-responsive wrap" role="main">
 
-        <main class="flex flex-col md:flex-row">
-            <aside class="w-full md:w-64 pt-8 md:pt-12 fixed top-0 bg-cold-lightest pl-8 sticky md:min-h-screen">
+        <main class="flex flex-col md:flex-row md:space-x-4">
+            <aside class="w-full md:w-1/3 lg:w-1/4 bg-cold-lightest px-8 pt-8 md:pt-16">
                 {% include documentation_sidebar.html %}
             </aside>
-            <article class="pl-8 md:pl-16 pr-8 md:pr-4 flex-1 mt-8 md:mt-16">
-                <div class="w-full md:w-3/4">
-                    {{ content }}
-                </div>
+            <article class="px-8 mt-8 md:mt-16 text-md w-full md:w-1/2">
+                {{ content }}
 
                 {% include documentation_footer.html %}
             </article>

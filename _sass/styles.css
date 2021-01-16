@@ -5,7 +5,11 @@
 @tailwind utilities;
 
 ul {
-    list-style-type: disc;
+    @apply list-disc;
+}
+
+ol {
+    @apply list-decimal;
 }
 
 .inline-link {
@@ -52,3 +56,18 @@ ul {
     @apply no-underline bg-cold-lighter;
 }
 
+.docs-menu-link {
+    @apply mb-4 md:mr-0;
+}
+
+h1 {
+    @apply mb-6;
+}
+
+h2 {
+    @apply mb-4;
+}
+
+h3 {
+    @apply mb-2;
+}
