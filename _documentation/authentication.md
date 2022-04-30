@@ -56,20 +56,16 @@ If you're using the [Laravel UI](https://github.com/laravel/ui) scaffolding for 
 
 ### Validation rules
 
-Firstly, we'll need to update the validation rules for registering from:
+Firstly, we'll need to update the validation rules for registering a new user.
+The default validation rule is this:
 
 ```php
-protected function validator(array $data)
-{
-    return Validator::make($data, [
-        'name' => ['required', 'string', 'max:255'],
-        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-        'password' => ['required', 'string', 'min:8', 'confirmed'],
-    ]);
-}
+['email' => ['required', 'string', 'email', 'max:255', 'unique:users']]
 ```
 
-To a customer validation rule for the unique password on a ``User`` model:
+We'll need to replace the ``unique:users`` validation rule to ``new \AloiaCms\Validation\Rules\Unique(\AloiaCms\Auth\User::class)``.
+
+The complete validation ruleset now looks like this:
 
 ```php
 protected function validator(array $data)
