@@ -17,13 +17,13 @@ This is what we'll cover:
 ## Where are files saved? {#file_location}
 Files are saved in the folder you specify in the config file (aloiacms.php) under the ``collections_path`` key: ``config('aloiacms.collections_path')``.
 
-The default location where the files are saved is: ``resource_path('content/collections')``.
+The default location where the files are saved is: ``storage_path('app/collections')``.
 
-You can change this to any folder you prefer, for example: ``storage_path('app/collections')``.
+You can change this to any folder you prefer, for example: ``storage_path('app/content')``.
 
-Each model is saved in it's own folder. 
+Each model is saved in its own folder. 
 
-If we assume that you're saving the Article model, which at it's most basic form looks like this:
+If we assume that you're saving the Article model, which at its most basic form looks like this:
 
 ```php
 namespace AloiaCms\Models;
@@ -34,7 +34,7 @@ class Article extends Model
 }
 ```
 
-This model instance will be saved to ``resources/content/collections/articles/file-name.extension``.
+This model instance will be saved to ``storage/app/collections/articles/file-name.extension``.
 
 ## How are models saved to files? {#how_saved}
 
