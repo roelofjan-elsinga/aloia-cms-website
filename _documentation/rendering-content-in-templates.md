@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: Rendering content in Blade templates
-permalink: /rending-content-in-templates
+permalink: /rendering-content-in-templates
 ---
 
 # Rendering content in Blade templates
